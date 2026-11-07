@@ -1,0 +1,158 @@
+.your-page-grid {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 3%;
+    gap: 20px;
+    width: 90%;
+    justify-self: center;
+}
+
+
+.header-and-content {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 8;
+    width: 95%;
+    height: 100vh;
+}
+.profile-header-and-edit-button-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+justify-content: space-between}
+
+.your-page-divider {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.your-page-divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--divider);
+}
+
+.header-and-content-container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.your-page-title {
+    color: var(--heading);
+    font-family: "Lora", serif;
+    font-size: 2.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.your-page-introduction {
+    color: var(--subtitle);
+    font-family: "Inter", sans-serif;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 5px;
+
+}
+
+.profile-edit-button{
+    display: inline-flex;
+    padding: 0.79781rem 1.263rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.46519rem;
+    border-radius: 0.5815rem;
+    background: #B17B53;
+    color: #FBF8F3;
+    font-family: Inter;
+    font-size: 0.91413rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.profile-edit-button:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.your-page-main-content h1 {
+    color: var(--heading);
+    font-family: Lora;
+    font-size: 1.1875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+}
+
+.your-page-main-content p{
+    color: var(--subtitle);
+    font-family: Inter;
+    font-size: 0.90625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 1.45rem */
+}
+
+
+.profile-box {
+    grid-column: span 4;
+    border-radius: 14px;
+    background: rgba(177, 123, 83, 0.10);
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 250px;
+    border-radius: 14px 14px 0 0;
+    object-fit: cover; /* prevents stretching/distortion */
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    justify-self: center;
+}
+
+.profile-name {
+    color: var(--heading);
+    font-family: Lora;
+    font-size: 1.55rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+}
+
+.profile-box-label{
+    color: var(--subtitle);
+    font-family: Inter;
+    font-size: 0.65625rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.profile-box-info{
+    color: var(--subtitle);
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
