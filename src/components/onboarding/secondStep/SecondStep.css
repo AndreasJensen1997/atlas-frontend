@@ -1,0 +1,107 @@
+.what-is-atlas {
+    width: 100%;
+    min-height: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0 35px;
+    overflow: hidden;
+}
+
+
+/* =========================
+   CIRCLE
+========================= */
+
+.what-is-atlas__circle {
+    width: 88px;
+    height: 88px;
+
+    flex-shrink: 0;
+
+    background: #B17B53;
+    border-radius: 50%;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.what-is-atlas__title {
+    width: 460px;
+    max-width: 100%;
+
+    margin: 0 0 30px;
+
+    text-align: center;
+
+    color: #382B21;
+
+    font-family: "Lora", serif;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.what-is-atlas__description {
+    width: 460px;
+    max-width: 100%;
+
+    margin: 0;
+
+    text-align: center;
+
+    color: #73604F;
+
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+
+    line-height: 1.45;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.what-is-atlas__button {
+    margin-top: 50px;
+
+    padding: 12px 20px;
+
+    background: #B17B53;
+    border: none;
+    border-radius: 10px;
+
+    color: #FBF8F3;
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+            background 0.2s ease,
+            transform 0.2s ease;
+}
+
+.what-is-atlas__button:hover {
+    background: #9f6c48;
+}
+
+.what-is-atlas__button:active {
+    transform: translateY(1px);
+}
