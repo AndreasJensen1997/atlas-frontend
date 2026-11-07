@@ -1,0 +1,232 @@
+/* =========================================
+   THEME TOGGLE
+   ========================================= */
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   TRACK
+   ========================================= */
+
+.theme-toggle__track {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 78px;
+    height: 42px;
+
+    padding: 4px;
+
+    background: #6B5442;
+    border-radius: 999px;
+
+    box-sizing: border-box;
+
+    transition:
+            background-color 0.35s ease,
+            border-color 0.35s ease;
+}
+
+
+/* Dark mode track */
+
+.theme-toggle__track--dark {
+    background: #513d2d;
+    border-color: #574538;
+}
+
+
+/* =========================================
+   MOVING INDICATOR
+   ========================================= */
+
+.theme-toggle__indicator {
+    position: absolute;
+
+    z-index: 3;
+
+    top: 4px;
+    left: 4px;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #ECE2D3;
+
+    cursor: pointer;
+
+    transition:
+            transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+            background-color 0.35s ease,
+            box-shadow 0.35s ease;
+}
+
+
+/* Move indicator to the right */
+
+.theme-toggle__indicator--dark {
+    transform: translateX(36px);
+
+    background: #B17B53;;
+
+    box-shadow:
+            0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   SUN / MOON BUTTONS
+   ========================================= */
+
+.theme-toggle__option {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 32px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #8F7A66;
+    transition:
+            color 0.3s ease,
+            transform 0.25s ease;
+}
+
+
+/* =========================================
+   ICONS
+   ========================================= */
+
+.theme-toggle__icon {
+    display: block;
+
+    transition:
+            transform 0.25s ease,
+            color 0.3s ease;
+}
+
+
+/* Hover */
+
+.theme-toggle__option:hover {
+    color: #382B21;
+}
+
+.theme-toggle__option:hover .theme-toggle__icon {
+    transform: scale(1.1);
+
+}
+
+
+/* Press */
+
+.theme-toggle__option:active .theme-toggle__icon {
+    transform: scale(0.92);
+
+}
+
+
+/* =========================================
+   DARK MODE ICON HOVER
+   ========================================= */
+
+/*
+   When the track is dark, use a lighter
+   hover color so the icons remain visible.
+*/
+
+.theme-toggle__track--dark .theme-toggle__option {
+    color: #AA9A87;
+}
+
+.theme-toggle__track--dark .theme-toggle__option:hover {
+    color: #F2ECE1;
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+.theme-toggle__option:focus-visible,
+.theme-toggle__indicator:focus-visible {
+    outline: 2px solid #B17B53;
+    outline-offset: 2px;
+}
+
+
+
+.toast-center {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -20px);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: max-content;
+    max-width: 90vw;
+    padding: 18px 28px;
+
+    /* 1. Make the background semi-transparent (e.g., 70% opacity) */
+    background-color: rgb(from var(--button-primary) r g b / 0.7);
+
+    /* 2. Backdrop filter applies ONLY to what is behind this element */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px); /* Safari support */
+    color: var(--button-primary-text);
+    border-radius: 12px;
+
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-align: center;
+    white-space: nowrap;
+
+    z-index: 9999;
+    pointer-events: none;
+
+    animation: toastPop 3s ease;
+}
+
+@keyframes toastPop {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -10px) scale(0.95);
+    }
+    12% {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+    }
+    85% {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -10px) scale(0.97);
+    }
+}
