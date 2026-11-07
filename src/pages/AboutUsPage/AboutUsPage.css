@@ -1,0 +1,356 @@
+.about-page {
+    width: 100%;
+    min-height: 100vh;
+
+    background: var(--background-color);
+    color: var(--heading);
+}
+
+/* =========================================================
+   RETURN BUTTON
+   ========================================================= */
+
+.about-return-button {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    width: fit-content;
+    position: absolute;
+    top: 24px;
+    left: 28px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.about-return-button__arrow {
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.about-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 520px;
+    padding: 80px 24px;
+
+    background: var(--navbar-background-color);
+
+}
+
+
+.about-hero__content {
+    width: min(900px, 100%);
+    text-align: center;
+}
+
+.about-hero__eyebrow,
+.about-section__eyebrow {
+    margin: 0 0 16px;
+
+    color: var(--subtitle);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.about-hero__title {
+    margin: 0;
+
+    color: var(--heading-reverse);
+
+    font-size: clamp(42px, 7vw, 76px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+.about-hero__title span {
+    color: #D9A579;
+}
+
+.about-hero__subtitle {
+    max-width: 650px;
+
+    margin: 28px auto 0;
+
+    color: var(--navbar-section-title);
+
+    font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+   ========================================================= */
+
+.about-section {
+    width: min(1100px, calc(100% - 48px));
+
+    margin: 0 auto;
+    padding: 110px 0;
+}
+
+.about-section__heading {
+    max-width: 650px;
+}
+
+.about-section__heading h2 {
+    margin: 0;
+
+    font-size: clamp(32px, 5vw, 50px);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.about-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    border-bottom: 1px solid var(--divider);
+}
+
+.about-intro__text {
+    align-self: end;
+}
+
+.about-intro__text p {
+    margin: 0 0 20px;
+
+    color: var(--subtitle);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.about-intro__text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.about-features {
+    border-bottom: 1px solid var(--divider);
+}
+
+.about-features__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    margin-top: 55px;
+}
+
+.about-feature {
+    min-height: 260px;
+    padding: 30px;
+    background: var(--dashboard-info-box-background);
+    border: none;
+    border-radius: 18px;
+    transition: transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.about-feature:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 14px 30px rgba(56, 43, 33, 0.08);
+}
+
+.about-feature__number {
+    margin-bottom: 50px;
+
+    color: var(--secondary-text);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.about-feature h3 {
+    margin: 0 0 12px;
+
+    color: var(--heading);
+
+    font-size: 24px;
+}
+
+.about-feature p {
+    max-width: 480px;
+
+    margin: 0;
+
+    color: var(--subtitle);
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.about-section__heading h2 {
+    text-align: left;
+    margin-left: 50px;
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+   ========================================================= */
+
+.about-philosophy {
+    padding: 120px 24px;
+
+    background: var(--navbar-background-color);
+}
+
+.about-philosophy__content {
+    width: min(850px, 100%);
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.about-philosophy blockquote {
+    margin: 0;
+
+    color: var(--heading-reverse);
+
+    font-size: clamp(30px, 5vw, 52px);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+.about-philosophy__text {
+    max-width: 650px;
+
+    margin: 32px auto 0;
+
+    color: var(--navbar-section-title);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.about-cta {
+    width: min(850px, 100%);
+
+    padding: 120px 24px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.about-cta h2 {
+    margin: 0;
+    color: var(--heading);
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 1.15;
+}
+
+.about-cta > p:last-child {
+    max-width: 550px;
+    margin: 24px auto 0;
+    color: var(--subtitle);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+    .about-hero {
+        min-height: 450px;
+        padding: 70px 24px;
+    }
+
+    .about-section {
+        padding: 80px 0;
+    }
+
+    .about-intro {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-features__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-feature {
+        min-height: auto;
+    }
+
+    .about-feature__number {
+        margin-bottom: 35px;
+    }
+
+    .about-philosophy {
+        padding: 90px 24px;
+    }
+
+    .about-cta {
+        padding: 90px 24px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .about-section {
+        width: calc(100% - 32px);
+    }
+
+    .about-hero {
+        min-height: 400px;
+    }
+
+    .about-feature {
+        padding: 24px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .about-return-button {
+        top: 16px;
+        left: 16px;
+
+        padding: 8px 11px;
+    }
+}
