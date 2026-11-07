@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+:root {
+
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
+
+    /*<LIGHT THEME*/
+    --heading: #382B21;
+    --heading-reverse:#EDE4D3 ;
+    --subtitle: #73604F;
+    --input-field: #fbf8f3;
+    --input-focus: #b17b53;
+    --input-field-border: #d4c8b4;
+    --placeholder: #73604f;
+    --label: #73604F;
+
+    /*NAVBAR*/
+    --navbar-background-color: #3C2E23;
+    --navbar-search-field:#4F3C2D;
+    --navbar-search-field-text: #AA9A87;
+    --navbar-search-field-placeholder:#AA9A87 ;
+    --navbar-section-title: #AA9A87;
+
+    /*POPUP*/
+    --pop-up-background:#FBF8F3;
+    --pop-up-border:#d4c8b4;
+    --pop-up-title: #73604F;
+    --pop-up-subtitle: #73604F;
+
+    --secondary-text: #8c5c38;
+    --terms-and-conditions: #AA9A87;
+
+    /*BUTTONS*/
+    --button-primary: #B17B53;
+    --button-primary-text: #FBF8F3;
+
+    --button-secondary: #faf7f2;
+    --button-secondary-border: #b17b53;
+    --button-secondary-text: #8c5c38;
+
+    /*DASHBOARD INFO BOXES*/
+    --dashboard-info-box-background: #FBF8F3;
+    --long-dashboard-info-box-background: #3C2E23;
+    --long-dashboard-info-box-text: #ECE2D3;
+    --dashboard-info-box-border: #D4C8B4;
+
+    --notification-box: rgba(177, 123, 83, 0.10);
+
+    /*DIVIDER*/
+    --divider: #D4C8B4;
+    --divider-text: #73604F;
+
+    --background-color: #fff0df;;
+    --color-bg-input: #fbf8f3;
+    --color-border: #d4c8b4;
+    --color-primary: #b17b53;
+    --color-primary-text: #fbf8f3;
+    --color-text-heading: #382b21;
+    --color-text-body: #73604f;
+    --color-text-inactive-tab: #73604f;
+    --color-link: #8c5c38;
+    --color-secondary-border: #b17b53;
+    --color-secondary-text: #8c5c38;
+
+
+    --footer-headings: #3C2E23;
+    --footer-paragraphs: #73604F;
+    --footer-icons: #B17B53;
+    --footer-paragraph-hover: #B17B53FF;
+    --footer-icon-hover: #3C2E23;
+
+
+
+    --dashboard-shadow-box: 0 1px 3px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.03), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+    --dashboard-shadow-box-hover: 0 2px 6px rgba(0, 0, 0, 0.04), 0 8px 20px rgba(0, 0, 0, 0.06), inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+
+}
+
+*,
+*::before,
+*::after {
+    transition: background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    fill 0.3s ease,
+    stroke 0.3s ease;
+}
+
+body {
+    margin: 0;
+    background: var(--background-color);
+}
+
+#root {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+}
+
+html {
+    scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+[data-theme="dark"] {
+    --heading: #EDE4D3;
+    --heading-reverse:#EDE4D3 ;
+    --subtitle: #A9987F;
+    --input-field: #281F18;
+    --input-focus: #b17b53;
+    --input-field-border: #4A3B2C;
+    --placeholder: #A9987F;
+    --label: #A9987F;
+
+    /*NAVBAR*/
+    --navbar-background-color: #160F0A;
+
+    --navbar-search-field:#281F18;
+    --navbar-search-field-text: #AA9A87;
+    --navbar-search-field-placeholder:#AA9A87 ;
+    --navbar-section-title: #AA9A87;
+
+    /*POPUP*/
+    --pop-up-background:#2E241B;
+    --pop-up-border:#4A3B2C;
+    --pop-up-title: #EDE4D3;
+    --pop-up-subtitle: #EDE4D3;
+
+
+    --secondary-text: #D9A579;
+    --terms-and-conditions: #AA9A87;
+
+    /*BUTTONS*/
+    --button-primary: #B17B53;
+    --button-primary-text: #FBF8F3;
+
+    --button-secondary: #2E241B;
+    --button-secondary-border: #b17b535e;
+    --button-secondary-text: #D9A579;
+
+    /*DIVIDER*/
+    --divider: #4A3B2C;
+    --divider-text: #A9987F;
+
+    /*DASHBOARD INFO BOXES*/
+    --dashboard-info-box-background: #2E241B;
+    --long-dashboard-info-box-background:#B17B53;
+    --long-dashboard-info-box-text:#FBF8F3;
+    --dashboard-info-box-border: #4A3B2C;
+
+    --notification-box: rgba(177, 123, 83, 0.10);
+
+
+
+    --background-color: #211812;
+    --color-bg-input: #e19e2d;
+    --color-border: rgba(212, 200, 180, 0.4);
+    --color-primary: rgba(177, 123, 83, 0.22);
+    --color-primary-text: rgba(251, 248, 243, 0.33);
+    --color-text-heading: #382b21;
+    --color-text-body: rgba(115, 96, 79, 0.4);
+    --color-text-inactive-tab: rgba(115, 96, 79, 0.37);
+    --color-link: rgba(140, 92, 56, 0.37);
+    --color-secondary-border: rgba(177, 123, 83, 0.37);
+    --color-secondary-text: #8c5c38;
+
+
+    --footer-headings: #EDE4D3;
+    --footer-paragraphs: #A9987F;
+    --footer-icons: #A9987F;
+    --footer-paragraph-hover: #A9987FFF;
+    --footer-icon-hover: #EDE4D3;
+
+
+    --dashboard-shadow-box: 0 1px 3px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.20);
+    --dashboard-shadow-box-hover: 0 2px 6px rgba(0, 0, 0, 0.25), 0 8px 20px rgba(0, 0, 0, 0.30);
+
+}
+
+/*DARK MODERN THEME*/
+[data-theme="modern"] {
+    /* =========================
+       MODERN THEME
+       ========================= */
+
+    /* TEXT / FORM */
+    --heading: #17191C;
+    --heading-reverse: #F8F9FA;
+
+    --subtitle: #66707A;
+
+    --input-field: #FFFFFF;
+    --input-focus: #5B7CFA;
+    --input-field-border: #D9DEE5;
+
+    --placeholder: #9AA3AD;
+    --label: #4F5964;
+
+
+    /* =========================
+       NAVBAR
+       ========================= */
+
+    --navbar-background-color: #17191C;
+    --navbar-search-field: #24282D;
+    --navbar-search-field-text: #F1F3F5;
+    --navbar-search-field-placeholder: #89929C;
+    --navbar-section-title: #9AA3AD;
+
+
+    /* =========================
+       POPUP
+       ========================= */
+
+    --pop-up-background: #FFFFFF;
+    --pop-up-border: #E1E5EA;
+
+    --pop-up-title: #17191C;
+    --pop-up-subtitle: #66707A;
+
+    --secondary-text: #5B7CFA;
+    --terms-and-conditions: #8A939D;
+
+
+    /* =========================
+       BUTTONS
+       ========================= */
+
+    --button-primary: #5B7CFA;
+    --button-primary-text: #FFFFFF;
+
+    --button-secondary: #F5F6F7;
+    --button-secondary-border: #D9DEE5;
+    --button-secondary-text: #3E464F;
+
+
+    /* =========================
+       DASHBOARD INFO BOXES
+       ========================= */
+
+    --dashboard-info-box-background: #FFFFFF;
+
+    --long-dashboard-info-box-background: #17191C;
+    --long-dashboard-info-box-text: #F1F3F5;
+
+    --dashboard-info-box-border: #E1E5EA;
+
+    --notification-box: rgba(91, 124, 250, 0.08);
+
+
+    /* =========================
+       DIVIDER
+       ========================= */
+
+    --divider: #E1E5EA;
+    --divider-text: #66707A;
+
+
+    /* =========================
+       GENERAL COLORS
+       ========================= */
+
+    --background-color: #F5F6F7;
+
+    --color-bg-input: #FFFFFF;
+    --color-border: #D9DEE5;
+
+    --color-primary: #5B7CFA;
+    --color-primary-text: #FFFFFF;
+
+    --color-text-heading: #17191C;
+    --color-text-body: #66707A;
+
+    --color-text-inactive-tab: #89929C;
+
+    --color-link: #4F6FE8;
+
+    --color-secondary-border: #D9DEE5;
+    --color-secondary-text: #3E464F;
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    --footer-headings: #17191C;
+    --footer-paragraphs: #66707A;
+
+    --footer-icons: #5B7CFA;
+    --footer-paragraph-hover: #5B7CFA;
+    --footer-icon-hover: #17191C;
+
+
+    /* =========================
+       SHADOWS
+       ========================= */
+
+    --dashboard-shadow-box:
+            0 1px 2px rgba(0, 0, 0, 0.03),
+            0 4px 12px rgba(0, 0, 0, 0.04);
+
+    --dashboard-shadow-box-hover:
+            0 2px 4px rgba(0, 0, 0, 0.04),
+            0 8px 24px rgba(0, 0, 0, 0.08);
+
+}
