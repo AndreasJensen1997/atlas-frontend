@@ -1,0 +1,76 @@
+.settings-box-container {
+    background: var(--dashboard-info-box-background);
+    border-radius: 14px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    box-shadow: var(--dashboard-shadow-box);
+    grid-column: span 6;
+    grid-row: span 2;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+
+.settings-header-container {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.settings-box-header {
+    text-align: left;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.settings-svg {
+    width: 24px;
+    height: 24px;
+}
+
+
+.settings-box-container:hover {
+    box-shadow: var(--dashboard-shadow-box-hover);
+    transform: translateY(-1px);
+}
+
+.settings-box-title {
+    color: var(--heading);
+    font-family: Inter;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.settings-box-description {
+    color: var(--subtitle);
+    font-family: Inter;
+    font-size: 0.78125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Divider */
+.settings-divider {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+}
+
+.settings-divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--divider);
+}
+
+.settings-box-buttons{
+    margin-right: 20px;
+}
