@@ -1,0 +1,525 @@
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+.contact-page {
+    min-height: 100vh;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: 1fr;
+    background: var(--background-color);
+    color: var(--heading);
+
+}
+
+
+
+/* =========================================================
+   RETURN BUTTON
+   ========================================================= */
+
+.contact-return-button {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 9px 14px;
+
+    background: transparent;
+    border: 1px solid rgba(237, 228, 211, 0.2);
+    border-radius: 9px;
+
+    color: var(--heading-reverse);
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+            background-color 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease;
+}
+
+.contact-return-button:hover {
+    background: rgba(237, 228, 211, 0.08);
+    border-color: rgba(237, 228, 211, 0.35);
+
+    transform: translateX(-2px);
+}
+
+.contact-return-button span {
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.contact-intro {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 30px;
+
+    width: min(860px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 90px 0 110px;
+
+    border-bottom: 1px solid var(--divider);
+}
+
+.contact-intro__number {
+    padding-top: 6px;
+
+    color: var(--secondary-text);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.contact-eyebrow {
+    margin: 0 0 16px;
+
+    color: var(--secondary-text);
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.contact-intro h1 {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: var(--heading);
+
+    font-size: clamp(45px, 6vw, 72px);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+}
+
+.contact-intro h1 span {
+    color: var(--secondary-text);
+}
+
+.contact-intro__text {
+    max-width: 620px;
+
+    margin: 30px 0 0;
+
+    color: var(--subtitle);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   MAIN CONTACT AREA
+   ========================================================= */
+
+.contact-main {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 90px;
+
+    width: min(1100px, calc(100% - 64px));
+
+    margin: 0 auto;
+    padding: 100px 0 120px;
+}
+
+
+/* =========================================================
+   CONTACT INFO
+   ========================================================= */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-info__heading h2 {
+    max-width: 350px;
+    margin: 0;
+    color: var(--heading);
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   CONTACT METHODS
+   ========================================================= */
+
+.contact-methods {
+    margin-top: 70px;
+}
+
+.contact-method {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    gap: 15px;
+
+    padding: 22px 0;
+
+    border-top: 1px solid var(--divider);
+}
+
+.contact-method:last-child {
+    border-bottom: 1px solid var(--divider);
+}
+
+.contact-method__number {
+    padding-top: 3px;
+
+    color: var(--secondary-text);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.contact-method h3 {
+    margin: 0 0 7px;
+
+    color: var(--heading);
+
+    font-size: 15px;
+}
+
+.contact-method p {
+    margin: 0;
+
+    color: var(--subtitle);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM CONTAINER
+   ========================================================= */
+
+.contact-form-container {
+    padding: 36px;
+    background: var(--dashboard-info-box-background);
+    border-radius: 18px;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.contact-field label {
+    color: var(--label);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.contact-field input,
+.contact-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 13px 14px;
+
+    background: var(--input-field);
+
+    border:none;
+    border-radius: 9px;
+
+    color: var(--heading);
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
+}
+
+.contact-field input {
+    height: 46px;
+}
+
+.contact-field textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: var(--placeholder);
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+    border-color: var(--input-focus);
+
+    box-shadow: 0 0 0 3px rgba(177, 123, 83, 0.12);
+}
+
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+.contact-submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    width: 100%;
+
+    padding: 14px 20px;
+
+    background: var(--button-primary);
+    border: 1px solid var(--button-primary);
+    border-radius: 10px;
+
+    color: var(--button-primary-text);
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+            transform 0.2s ease,
+            filter 0.2s ease;
+}
+
+.contact-submit-button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+.contact-submit-button span {
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   HELP SECTION
+   ========================================================= */
+
+.contact-help {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 700px);
+    gap: 80px;
+
+    width: min(1100px, calc(100% - 64px));
+
+    margin: 0 auto;
+    padding: 90px 0 110px;
+
+    border-top: 1px solid var(--divider);
+}
+
+.contact-help__label {
+    display: flex;
+    gap: 15px;
+
+    color: var(--subtitle);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.contact-help__label span {
+    color: var(--secondary-text);
+}
+
+.contact-help__content h2 {
+    max-width: 500px;
+
+    margin: 0 0 60px;
+
+    color: var(--heading);
+
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+.faq-link{
+    color: var(--secondary-text);
+}
+
+.faq-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
+
+/* =========================================================
+   FINAL MESSAGE
+   ========================================================= */
+
+.contact-footer-message {
+    padding: 120px 24px;
+
+    background: var(--navbar-background-color);
+
+    text-align: center;
+}
+
+.contact-footer-message h2 {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: var(--heading-reverse);
+
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 850px) {
+
+    .contact-main {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .contact-info {
+        display: block;
+    }
+
+    .contact-methods {
+        margin-top: 45px;
+    }
+
+    .contact-help {
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 45px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 650px) {
+
+    .contact-topbar {
+        height: 68px;
+        padding: 0 18px;
+    }
+
+    .contact-intro,
+    .contact-main,
+    .contact-help {
+        width: calc(100% - 36px);
+    }
+
+    .contact-intro {
+        grid-template-columns: 1fr;
+        gap: 12px;
+
+        padding: 65px 0 75px;
+    }
+
+    .contact-intro__number {
+        padding: 0;
+    }
+
+    .contact-main {
+        padding: 70px 0 80px;
+    }
+
+    .contact-form-container {
+        padding: 24px;
+    }
+
+    .contact-form__row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-help {
+        display: block;
+
+        padding: 70px 0 80px;
+    }
+
+    .contact-help__label {
+        margin-bottom: 35px;
+    }
+
+    .contact-help__content h2 {
+        margin-bottom: 40px;
+    }
+
+    .contact-footer-message {
+        padding: 90px 20px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 450px) {
+
+    .contact-logo {
+        font-size: 13px;
+    }
+
+    .contact-return-button {
+        padding: 8px 11px;
+        font-size: 13px;
+    }
+
+    .contact-intro h1 {
+        font-size: 43px;
+    }
+
+    .contact-form-container {
+        padding: 20px;
+    }
+}
