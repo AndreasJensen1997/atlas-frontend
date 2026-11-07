@@ -1,0 +1,71 @@
+.error-page-grid {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 30rem;
+    height: 26.125rem;
+    border: solid red;
+    justify-self: center;
+    align-items: center;     /* Centers horizontally */
+}
+
+.error-page-svg {
+    margin-right: auto;
+    margin-left: auto
+}
+
+.error-page-title {
+    color: #382B21;
+    text-align: center;
+    font-family: "Lora", serif;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.error-page-description {
+    color: #382B21;
+    text-align: center;
+    font-family: "Lora", serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.error-page-paragraph {
+    color: #73604F;
+    text-align: center;
+    font-family: Inter;
+    font-size: 0.84375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 40px;
+}
+
+
+.error-page-return-button {
+    padding: 0.95rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.625rem;
+    background: #B17B53;
+}
+
+.error-page-return-text {
+    color: #FBF8F3;
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.error-page-return-button-link {
+    text-decoration: none;
+}
