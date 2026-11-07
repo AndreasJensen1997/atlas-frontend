@@ -1,0 +1,353 @@
+.navbar {
+    background: var(--navbar-background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.navbar-header-container {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--navbar-background-color);
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.navbar-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    justify-content: left;
+    padding-left: 10%;
+    top: 0;
+    z-index: 10;
+    background: var(--navbar-background-color); /* important, see below */
+}
+
+
+.hide-navbar-icon:hover {
+    cursor: pointer;
+}
+
+.hide-navbar-icon:hover .hide-navbar-icon-path {
+    stroke: #ECE2D3;
+}
+
+
+.hide-navbar-icon-container {
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.navbar-header-divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+.navbar-header-divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--divider);
+}
+
+.navbar-title {
+    color: var(--heading-reverse);
+    font-family: "Lora", serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    margin: 0;
+}
+
+.navbar-circle-icon {
+    margin: 0;
+}
+
+.navbar-title-container {
+    text-decoration: none;
+}
+
+.navbar-title:hover {
+    cursor: pointer;
+    color: #d1a280;
+}
+
+.navbar-search-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 20px;
+    background: var(--navbar-search-field);
+    color: var(--navbar-search-field-text);
+    font-family: "Inter", sans-serif;
+    margin-bottom: 10px;
+    position: sticky;
+    margin-top: 20px;
+}
+
+.navbar-search-section:focus-within {
+    border-color: var(--placeholder);
+}
+
+.navbar-search-input:focus {
+    outline: none;
+}
+
+.navbar-search-input {
+    width: 100%;
+    padding: 15px 20px;
+    background: var(--navbar-search-field);
+    border: none;
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: clamp(12px, 3vw, 15px);
+    color: var(--navbar-search-field-text);
+    box-sizing: border-box;
+}
+
+.navbar-search-input::placeholder {
+    margin-right: auto;
+    justify-self: left;
+    color: var(--navbar-search-field-placeholder);
+    opacity: 0.7;
+
+}
+
+.navbar-search-input:focus {
+    outline: none;
+}
+
+
+p {
+    color: var(--navbar-section-title);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: auto;
+    text-align: left;
+}
+
+.navbar p:hover {
+    text-decoration: underline;
+}
+
+
+.navbar-section-titles {
+    color: var(--navbar-section-title);
+    font-family: "Inter", sans-serif;
+    font-size: 0.7875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+    padding-left: 10px;
+
+}
+
+.navbar-section-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.arrow-icon {
+    transition: transform 0.2s ease;
+}
+
+.arrow-icon--open {
+    transform: rotate(90deg);
+}
+
+.navbar-section-titles:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.navbar-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 20px;
+    gap: 10px;
+    transition: background-color 0.1s ease, box-shadow 0.1s ease;
+    border-radius: 10px;
+    text-decoration: none;
+
+}
+
+.navbar-section:hover {
+    background: rgba(177, 123, 83, 0.15);
+    cursor: pointer;
+}
+
+.navbar-section:hover p {
+    color: #ECE2D3;
+}
+
+.navbar-section:hover .navbar-icons {
+    fill: #ECE2D3;
+}
+
+/* For the two icons that need to change stroke instead of fill*/
+.navbar-section:hover .navbar-filter-icon {
+    stroke: #ECE2D3;
+}
+
+
+.active {
+    background: #B17B53;
+    border-radius: 10px;
+    animation: fadeIn 1s ease;
+}
+
+/*Used to keep the active section, active and not be overwritten by the hover effect*/
+.navbar-section.active:hover {
+    background: #B17B53;
+    box-shadow: none;
+
+}
+
+.active p {
+    color: #ECE2D3;
+}
+
+.active .navbar-icons {
+    fill: #ECE2D3;
+    animation: home-lift 0.3s ease-out;
+}
+
+.active .navbar-filter-icon {
+    animation: home-lift 0.3s ease-out;
+}
+
+@keyframes home-lift {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.active .navbar-filter-icon {
+    stroke: #ECE2D3;
+}
+
+@keyframes expandMenu {
+    0% {
+        opacity: 0;
+        transform: translateY(-8px) scaleY(0.95);
+        transform-origin: top center;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+        transform-origin: top center;
+    }
+}
+
+
+.navbar-profile-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
+}
+
+.navbar-profile-icon {
+    display: block;
+    width: 2.0625rem;
+    height: 2.0625rem;
+    aspect-ratio: 1/1;
+
+}
+
+
+.profile-name-and-button {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 2px;
+}
+
+.navbar-profile-name {
+    color: #ECE2D3;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 2px;
+}
+
+.navbar-profile-button {
+    color: #AA9A87;
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.navbar-logout-button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.toggle-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.navbar-collapsible-inner {
+    animation: expandMenu 0.25s ease forwards;
+    overflow: hidden;
+}
+
