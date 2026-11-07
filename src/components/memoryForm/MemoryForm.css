@@ -1,0 +1,35 @@
+.memory-form {
+    width: min(800px, 90%);
+    margin: 0 auto;
+}
+
+.memory-form__section {
+    margin: 0 0 24px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    background: var(--dashboard-info-box-background);
+    border: 1px solid var(--dashboard-info-box-border);
+    border-radius: 14px;
+}
+
+.memory-form__section legend {
+    padding: 0 12px;
+
+    color: var(--heading);
+    font-family: "Lora", serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.memory-form_input{
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--input-field);
+    border: 1px solid var(--input-field-border);
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: clamp(14px, 3vw, 18px);
+    color: var(--placeholder);
+    box-sizing: border-box;
+}
