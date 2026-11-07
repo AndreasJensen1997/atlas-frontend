@@ -1,0 +1,246 @@
+.register-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(16px, 4vw, 24px);
+
+    width: 100%;
+    max-width: 480px;
+
+    box-sizing: border-box;
+
+    font-family: "Inter", sans-serif;
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.register-frame__heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-frame__title {
+    margin: 0;
+
+    text-align: left;
+
+    font-family: "Lora", serif;
+    font-weight: 700;
+    font-size: clamp(20px, 5vw, 29px);
+
+    color: var(--heading);
+}
+
+.register-frame__subtitle {
+    margin: 0;
+
+    text-align: left;
+
+    font-weight: 400;
+    font-size: clamp(14px, 3vw, 17px);
+
+    color: var(--subtitle);
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.register-frame__form {
+    display: flex;
+    flex-direction: column ;
+
+    gap: clamp(16px, 4vw, 24px);
+
+    width: 100%;
+}
+
+.register-frame-form-inputs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+
+ }
+
+
+/* ================================
+   FORM FIELDS
+================================ */
+
+.register-frame__field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    width: 100%;
+}
+
+.register-frame__label {
+    font-weight: 600;
+
+    text-align: left;
+
+    font-size: clamp(12px, 2.5vw, 14px);
+
+    color: var(--label);
+
+    letter-spacing: 0.02em;
+}
+
+.register-frame__input {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    background: var(--input-field);
+
+    border: 1px solid var(--input-field-border);
+    border-radius: 11px;
+
+    font-family: inherit;
+    font-size: clamp(14px, 3vw, 18px);
+
+    color: var(--placeholder);
+
+    box-sizing: border-box;
+}
+
+.register-frame__input::placeholder {
+    color: var(--placeholder);
+    opacity: 0.7;
+}
+
+.register-frame__input:focus {
+    outline: none;
+
+    border-color: var(--input-focus);
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.register-frame__button {
+    width: 100%;
+
+    padding: clamp(12px, 3vw, 16px) clamp(16px, 5vw, 27px);
+
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-weight: 600;
+    font-size: clamp(14px, 3.5vw, 19px);
+
+    text-align: center;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition: background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+/* Primary button */
+
+.register-frame__button--primary {
+    background: var(--button-primary);
+
+    border: none;
+
+    color: var(--button-primary-text);
+}
+
+.register-frame__button--primary:hover {
+    background: #443428;
+}
+
+
+/* Secondary button */
+
+.register-frame__button--secondary {
+    background: var(--button-secondary);
+    border: 2px solid var(--button-secondary-border);
+    color: var(--button-secondary-text);
+}
+
+.register-frame__button--secondary:hover {
+    background: #443428;
+    border-color: #443428;
+    color: var(--color-primary-text);
+}
+
+/* ================================
+   TERMS & CONDITIONS
+================================ */
+
+.terms-and-conditions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.terms-and-conditions-button {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.25rem;
+    background: var(--button-primary);
+}
+
+.terms-and-conditions-button:hover {
+    cursor: pointer;
+}
+
+.terms-and-conditions-text {
+    color: var(--terms-and-conditions);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: auto;
+    text-align: left;
+}
+
+.terms-and-conditions-text:hover {
+    cursor: pointer;
+}
+
+
+/* ================================
+   DIVIDER
+================================ */
+
+.register-frame__divider {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    width: 100%;
+}
+
+.register-frame__divider-line {
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--divider);
+}
+
+.register-frame__divider-text {
+    font-size: clamp(12px, 2.5vw, 15px);
+
+    color: var(--divider-text);
+
+    white-space: nowrap;
+}
