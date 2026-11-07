@@ -1,0 +1,149 @@
+.notification-button {
+    border: none;
+    background: none;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.notification-dropdown {
+    width: 360px;
+    justify-self: right;
+
+    margin: 100px;
+    padding: 0;
+
+    background: var(--dashboard-info-box-background);
+    color: var(--heading);
+
+    border: 1px solid var(--dashboard-info-box-border);
+    border-radius: 16px;
+
+    box-shadow:
+            0 12px 40px rgba(56, 43, 33, 0.15);
+
+    overflow: hidden;
+    transform-origin: top right; /* Options: top left, top right, bottom left, bottom right */
+
+    animation: dropdownFade 0.5s cubic-bezier(0.5, 1, 0.3, 1) forwards;
+}
+
+@keyframes dropdownFade {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+
+/* Header */
+
+.notification-dropdown__header {
+    padding: 20px 22px;
+
+    border-bottom: 1px solid var(--dashboard-info-box-border);
+}
+
+.notification-dropdown__header h2 {
+    margin: 0;
+font-family: "Lora", serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+
+/* Notifications */
+
+.notification-dropdown__content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.notification {
+    display: flex;
+    gap: 12px;
+
+    padding: 16px 22px;
+
+    transition: background-color 0.2s ease;
+}
+
+.notification:hover {
+    background: rgba(177, 123, 83, 0.08);
+}
+
+
+/* Unread dot */
+
+.notification__dot {
+    width: 8px;
+    height: 8px;
+
+    margin-top: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #B17B53;
+}
+
+
+.notification p {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    color: var(--heading);
+
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+.notification span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--text-secondary);
+
+    font-size: 0.75rem;
+}
+
+
+/* View all */
+
+.notification-dropdown__view-all {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+    border-top: 1px solid var(--dashboard-info-box-border);
+
+    background: transparent;
+
+    color: #B17B53;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.notification-dropdown__view-all:hover {
+    background: rgba(177, 123, 83, 0.08);
+}
+
+.notification-box-time-label{
+    text-align: left;
+}
