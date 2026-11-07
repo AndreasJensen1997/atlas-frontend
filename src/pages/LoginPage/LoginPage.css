@@ -1,0 +1,36 @@
+.login-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.title-card {
+    grid-column: span 3;
+    background: var(--navbar-background-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form {
+    display: grid;
+    grid-column: span 7;
+    background: var(--background-color);
+    place-items: center;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .title-card {
+        grid-column: span 3;
+    }
+
+    .login-form {
+        grid-column: span 7;
+    }
+
+
+}
