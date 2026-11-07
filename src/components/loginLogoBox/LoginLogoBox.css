@@ -1,0 +1,72 @@
+
+.login-text-box {
+    text-align: left;
+    padding: 50px 50px 0px;
+    height: auto;
+    margin-top: 50px;
+}
+
+.title-logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.login-text-box h1 {
+    color: var(--heading-reverse);
+}
+
+.login-box-title {
+    text-align: left;
+    font-family: Lora;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.subtitle {
+    color: #ECE2D3;
+    font-family: Lora;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 0;
+    text-align: left;
+}
+
+.paragraph {
+    color: #AA9A87;
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.big-circle {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.login-box-theme-box {
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+@media screen and (min-width: 1600px) {
+
+    .login-text-box {
+        margin-top: 100px;
+        padding: 100px;
+    }
+
+}
+
+

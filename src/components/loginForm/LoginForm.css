@@ -1,0 +1,193 @@
+.login-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(16px, 4vw, 24px);
+    width: 100%;
+    max-width: 480px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* Tabs */
+.login-frame__tabs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    background: var(--color-bg-input);
+    border: 1px solid var(--color-border);
+    border-radius: 13px;
+    box-sizing: border-box;
+}
+
+.login-frame__tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--color-text-inactive-tab);
+    font-family: inherit;
+    font-weight: 600;
+    font-size: clamp(14px, 3vw, 18px);
+    padding: 12px 8px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.login-frame__tab--active {
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+}
+
+/* Heading */
+.login-frame__heading {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.login-frame__title {
+    margin: 0;
+    text-align: left;
+    font-family: "Lora", serif;
+    font-weight: 700;
+    font-size: clamp(20px, 5vw, 29px);
+    color: var(--heading);
+}
+
+.login-frame__subtitle {
+    margin: 0;
+    text-align: left;
+
+    font-weight: 400;
+    font-size: clamp(14px, 3vw, 17px);
+    color: var(--subtitle);
+}
+
+/* Form */
+.login-frame__form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 4vw, 24px);
+    width: 100%;
+}
+
+.login-frame__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.login-frame__label {
+    font-weight: 600;
+    text-align: left;
+
+    font-size: clamp(12px, 2.5vw, 14px);
+    color: var(--subtitle);
+    letter-spacing: 0.02em;
+}
+
+.login-frame__input {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--input-field);
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: clamp(14px, 3vw, 18px);
+    color: var(--placeholder);
+    box-sizing: border-box;
+    box-shadow: var(--dashboard-shadow-box);
+    border:  2px solid transparent;
+
+}
+
+.login-frame__input::placeholder {
+    color: var(--placeholder);
+    opacity: 0.7;
+}
+
+.login-frame__input:focus {
+    outline: none;
+    border-color: var(--dashboard-info-box-border);
+}
+
+
+/* Forgot password */
+.login-frame__forgot-row {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.login-frame__forgot-link {
+    font-weight: 500;
+    font-size: clamp(13px, 3vw, 17px);
+    color: var(--secondary-text);
+    text-decoration: none;
+}
+
+.login-frame__forgot-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* Buttons */
+.login-frame__button {
+    width: 100%;
+    padding: clamp(12px, 3vw, 16px) clamp(16px, 5vw, 27px);
+    border-radius: 10px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: clamp(14px, 3.5vw, 19px);
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.login-frame__button:hover {
+    cursor: pointer;
+    background: #443428
+}
+
+.login-frame__button--primary {
+    background: var(--button-primary);
+    border: none;
+    color: var(--button-primary-text);
+}
+
+.login-frame__button--secondary {
+    background: var(--button-secondary);
+    border: 2px solid var(--button-secondary-border);
+    color: var(--button-secondary-text);
+}
+
+.login-frame__button--unactive {
+    background: var(--color-bg-input);
+
+}
+
+/* Divider */
+.login-frame__divider {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+}
+
+.login-frame__divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--divider);
+}
+
+.login-frame__divider-text {
+    font-size: clamp(12px, 2.5vw, 15px);
+    color: var(--divider-text);
+    white-space: nowrap;
+}
