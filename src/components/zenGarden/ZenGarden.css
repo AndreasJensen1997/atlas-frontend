@@ -1,0 +1,506 @@
+.zen-garden {
+    min-height: 100vh;
+    grid-column: span 17;
+
+    padding: 70px 6vw 100px;
+
+    background:var(--background-color);
+    color: #4b4036;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.zen-header {
+    width: min(1200px, 100%);
+    margin: 0 auto 55px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.zen-eyebrow {
+    display: block;
+
+    margin-bottom: 14px;
+
+    font-size: 11px;
+    letter-spacing: 0.18em;
+
+    color: #aa9a87;
+}
+
+.zen-header h1 {
+    margin: 0;
+    color: var(--heading);
+
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+}
+
+.zen-header p {
+    margin: 14px 0 0;
+
+    color: var(--subtitle);
+
+    font-size: 15px;
+}
+
+
+.zen-add-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    border: 1px solid #cbbdad;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #665747;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.zen-add-button span {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.zen-add-button:hover {
+    background: #e9dfd1;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   GARDEN
+========================= */
+
+.garden {
+    position: relative;
+
+    width: min(1200px, 100%);
+    height: 650px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border: 1px solid #d8cbbb;
+    border-radius: 18px;
+
+    background: radial-gradient(
+            ellipse at 20% 30%,
+            rgba(255, 255, 255, 0.35),
+            transparent 40%
+    ),
+    #e7ddce;
+
+    box-shadow: 0 20px 50px rgba(80, 62, 45, 0.06);
+}
+
+
+/* =========================
+   SAND LINES
+========================= */
+
+.sand-lines {
+    position: absolute;
+
+    width: 65%;
+    height: 180px;
+
+    border-top: 1px solid rgba(145, 126, 105, 0.25);
+    border-bottom: 1px solid rgba(145, 126, 105, 0.18);
+
+    border-radius: 50%;
+
+    transform: rotate(-7deg);
+}
+
+.sand-lines::before,
+.sand-lines::after {
+    content: "";
+
+    position: absolute;
+
+    left: -5%;
+    right: -5%;
+
+    height: 100%;
+
+    border-top: 1px solid rgba(145, 126, 105, 0.18);
+    border-bottom: 1px solid rgba(145, 126, 105, 0.12);
+
+    border-radius: 50%;
+}
+
+.sand-lines::before {
+    top: 25px;
+}
+
+.sand-lines::after {
+    top: 50px;
+}
+
+.sand-lines--one {
+    left: -8%;
+    top: 40px;
+}
+
+.sand-lines--two {
+    right: -12%;
+    bottom: 10px;
+
+    transform: rotate(8deg);
+}
+
+
+/* =========================
+   MEMORY CARDS
+========================= */
+
+.garden-memory {
+    position: absolute;
+
+    padding: 25px;
+
+    background: rgba(248, 242, 232, 0.88);
+
+    border: 1px solid rgba(171, 151, 129, 0.35);
+
+    box-shadow: 0 12px 30px rgba(70, 52, 36, 0.08);
+
+    backdrop-filter: blur(4px);
+
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+    cursor: pointer;
+}
+
+.garden-memory:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 18px 40px rgba(70, 52, 36, 0.12);
+}
+
+
+/* Featured story */
+
+.garden-memory--featured {
+    left: 18%;
+    top: 150px;
+
+    width: 280px;
+
+    border-radius: 4px;
+}
+
+.garden-memory--featured::before {
+    content: "";
+
+    position: absolute;
+
+    left: -8px;
+    top: 20px;
+
+    width: 8px;
+    height: 35px;
+
+    background: #aa9a87;
+}
+
+
+/* Normal memory */
+
+.garden-memory--memory {
+    right: 15%;
+    top: 120px;
+
+    width: 230px;
+
+    border-radius: 50% 48% 45% 52%;
+}
+
+
+/* Small memory */
+
+.garden-memory--small {
+    left: 42%;
+    bottom: 90px;
+
+    width: 190px;
+
+    border-radius: 48% 52% 45% 50%;
+}
+
+
+/* Text */
+
+.memory-type {
+    margin-bottom: 18px;
+
+    font-size: 9px;
+    letter-spacing: 0.2em;
+
+    color: #aa9a87;
+}
+
+.garden-memory h2 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+    line-height: 1.15;
+
+    font-weight: 400;
+}
+
+.garden-memory h3 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.garden-memory p {
+    margin: 10px 0 0;
+
+    font-size: 12px;
+
+    color: #9b8c7a;
+}
+
+.garden-memory button {
+    margin-top: 22px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #705d4b;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   STONES
+========================= */
+
+.garden-stone {
+    position: absolute;
+
+    background: #a79b8d;
+
+    opacity: 0.75;
+
+    box-shadow: inset -8px -5px 10px rgba(70, 55, 40, 0.12),
+    inset 6px 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.garden-stone--one {
+    right: 7%;
+    bottom: 100px;
+
+    width: 65px;
+    height: 40px;
+
+    border-radius: 55% 45% 50% 40%;
+
+    transform: rotate(-8deg);
+}
+
+.garden-stone--two {
+    right: 12%;
+    bottom: 125px;
+
+    width: 35px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    transform: rotate(20deg);
+}
+
+.garden-stone--three {
+    left: 7%;
+    bottom: 80px;
+
+    width: 45px;
+    height: 28px;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   PLANT
+========================= */
+
+.garden-plant {
+    position: absolute;
+
+    left: 7%;
+    top: 110px;
+
+    width: 50px;
+    height: 80px;
+}
+
+.garden-plant span {
+    position: absolute;
+
+    width: 18px;
+    height: 42px;
+
+    border-left: 1px solid #8f927b;
+
+    border-radius: 100%;
+
+    transform-origin: bottom;
+}
+
+.garden-plant span:nth-child(1) {
+    transform: rotate(-25deg);
+}
+
+.garden-plant span:nth-child(2) {
+    left: 20px;
+
+    height: 55px;
+}
+
+.garden-plant span:nth-child(3) {
+    left: 30px;
+
+    transform: rotate(25deg);
+}
+
+
+/* =========================
+   ADD MEMORY
+========================= */
+
+.garden-add {
+    position: absolute;
+
+    right: 6%;
+    top: 300px;
+
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border: 1px dashed #b6a794;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #8d7c69;
+
+    cursor: pointer;
+
+    transition: background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.garden-add span {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.garden-add small {
+    font-size: 10px;
+}
+
+.garden-add:hover {
+    background: rgba(255, 255, 255, 0.25);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.zen-footer {
+    width: min(700px, 100%);
+
+    margin: 70px auto 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    text-align: left;
+}
+
+.zen-footer-symbol {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #c9b9a7;
+    border-radius: 50%;
+
+    color: #a18e7a;
+
+    font-size: 24px;
+}
+
+.zen-footer h3 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.zen-footer p {
+    margin: 6px 0 0;
+
+    color: #938372;
+
+    font-size: 13px;
+}
