@@ -1,0 +1,42 @@
+/* components/returnButton/ReturnButton.css */
+
+.return-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 8px 14px 8px 10px;
+    border-radius: 10px;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+    background: rgba(177, 123, 83, 0.15);
+
+}
+
+.return-button:hover {
+    background: rgba(177, 123, 83, 0.15);
+    cursor: pointer;
+    transform: translateX(-2px);
+}
+
+.return-button:hover .return-button__icon {
+    stroke: #B17B53;
+}
+
+.return-button:hover .return-button__label {
+    color: var(--heading);
+}
+
+.return-button__icon {
+    transition: stroke 0.15s ease;
+}
+
+.return-button__label {
+    color: var(--subtitle);
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+}
