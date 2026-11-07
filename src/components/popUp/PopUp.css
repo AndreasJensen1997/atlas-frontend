@@ -1,0 +1,163 @@
+/* =========================================================
+   POP UP
+   ========================================================= */
+
+.pop-up {
+    width: min(90vw, 500px);
+    padding: 20px;
+    border-radius: 18px;
+    border: none;
+    background: var(--pop-up-background);
+    color: var(--heading);
+    box-shadow: 0 24px 60px rgba(56, 43, 33, 0.18),
+    0 8px 20px rgba(56, 43, 33, 0.08);
+    overflow: hidden;
+    animation: popUpAnimation 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes popUpAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.pop-up-content {
+    display: flex;
+    flex-direction: column;
+    padding: 36px 100px;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.pop-up-text {
+    margin-bottom: 32px;
+}
+
+.pop-up-title {
+    margin: 0 0 10px;
+    color: var(--pop-up-title);
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+}
+
+.pop-up-subtitle {
+    margin: 0;
+    color: var(--pop-up-subtitle);
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    justify-self: center
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.pop-up-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.pop-up-button {
+    flex: 1;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.pop-up-button:hover {
+    transform: translateY(-1px);
+}
+
+.pop-up-button:active {
+    transform: translateY(0);
+}
+
+
+/* Secondary */
+
+.pop-up-button-cancel {
+    border-radius: 0.625rem;
+    background: #E7DDC9;
+    color: var(--button-secondary-text);
+
+}
+
+.pop-up-button-cancel:hover {
+    background: var(--button-secondary-border);
+}
+
+
+/* Primary */
+
+.pop-up-button-confirm {
+    background: var(--button-primary);
+    border: 1px solid var(--button-primary);
+    color: var(--button-primary-text);
+}
+
+.pop-up-button-confirm:hover {
+    filter: brightness(1.08);
+}
+
+
+/* =========================================================
+   BACKDROP
+   ========================================================= */
+
+.pop-up::backdrop {
+    background: rgba(22, 15, 10, 0.55);
+    backdrop-filter: blur(3px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 500px) {
+
+    .pop-up {
+        width: calc(100vw - 32px);
+        border-radius: 16px;
+    }
+
+    .pop-up-content {
+        padding: 28px 24px;
+    }
+
+    .pop-up-actions {
+        flex-direction: column-reverse;
+    }
+
+    .pop-up-button {
+        width: 100%;
+    }
+}
