@@ -1,0 +1,9 @@
+
+.onboard-grid{
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    background: var(--background-color);
+}
+
