@@ -1,0 +1,23 @@
+
+.homepage-grid {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: 1fr;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+
+
+}
+
+.navbar-grid {
+    grid-column: span 3;
+
+
+}
+
+
+.dashboard-grid {
+    grid-column: span 17;
+
+}
