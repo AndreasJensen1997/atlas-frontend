@@ -1,0 +1,41 @@
+.app-layout {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    min-height: 100vh;
+    align-items: start; /* 👈 stops the navbar column from stretching to content height */
+
+}
+
+.navbar-grid {
+    grid-column: span 3;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    scrollbar-gutter: stable; /* prevents layout jump when the scrollbar appears/disappears */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE / old Edge */
+
+}
+
+
+.navbar-grid::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari, new Edge */
+}
+
+.app-content {
+    grid-column: span 17;
+}
+
+.app-layout--collapsed .app-content {
+    grid-column: span 20;
+}
+
+.show-navbar-icon{
+    margin-right: auto;
+}
+
+.show-navbar-icon:hover{
+cursor: pointer;
+}
+
